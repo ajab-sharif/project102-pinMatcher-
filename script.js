@@ -51,7 +51,7 @@ class App {
         this.#secretNumber === +this.#number ? `${this._displayMsg('✅ Pin Matched... Secret door is opening for you')}` : `${this._displayMsg('❌ Pin Didn"t Match, Please try again')}`
 
         if (this.#secretNumber !== +this.#number) {
-            lifeEl.classList.remove('hide');
+            lifeEl.classList.remove('hidden');
             this.#life--;
             lifeEl.textContent = `${this.#life} try left`;
             if (this.#life <= 0) {

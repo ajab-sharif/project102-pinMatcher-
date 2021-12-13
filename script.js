@@ -10,6 +10,7 @@ const lifeEl = document.querySelector('.action-left');
 const btnSubmit = document.querySelector('.submit-btn')
 const btndelAll = document.querySelector('.btn-clear');
 const btndel = document.querySelector('.btn-delate');
+const notify = document.querySelector('.notify');
 class App {
     #life = 3;
     #secretNumber;
@@ -27,7 +28,6 @@ class App {
     }
     _displayMsg(message) {
         if (inputNumber.value == '') return;
-        let notify = document.querySelector('.notify');
         notify.classList.remove('hidden');
         notify.textContent = message;
     }
@@ -37,6 +37,7 @@ class App {
         this._inputFocus()
         this.#life = 3;
         lifeEl.textContent = '';
+        notify.classList.add('hidden');
     }
     _numberPad(e) {
         if (inputPin.value == '') return alert('Please First Generate PIN 😔');
